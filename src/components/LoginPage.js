@@ -3,12 +3,11 @@ import Header from './Header'
 import { checkValidData } from '../utils/Validate';
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/Firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/UserSlice';
+import { LOGIN_PAGE_BG_IMG, USER_AVATAR } from '../utils/Constants';
 
 const LoginPage = () => {
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const [errorMessage , setErrorMessage] = useState(null);
     const [isSignInForm , setIsSignInForm] = useState(true)
@@ -38,12 +37,11 @@ const LoginPage = () => {
 
                 updateProfile(user, {
                     displayName: Name.current.value, 
-                    photoURL: "https://avatars.githubusercontent.com/u/142130700?v=4"
+                    photoURL: USER_AVATAR,
                   }).then(() => {
                     // Profile updated!
                     const {uid, email, displayName ,photoURL} = auth.currentUser ;
                     dispatch(addUser({uid:uid, email:email, displayName:displayName, photoURL:photoURL}));
-                    navigate("/browse")
                     // ...
                   }).catch((error) => {
                     // An error occurred
@@ -53,7 +51,8 @@ const LoginPage = () => {
                   
 
                 // ...
-                console.log(user);
+                // console.log(user);
+                
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -67,9 +66,8 @@ const LoginPage = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                navigate("/browse")
                 // ...
-                console.log(user);
+                // console.log(user);
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -85,7 +83,7 @@ const LoginPage = () => {
     <div className=' '>
         <Header/>
         <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_large.jpg" 
+        <img src={LOGIN_PAGE_BG_IMG} 
             alt="BagroundImage" />
         </div>
     

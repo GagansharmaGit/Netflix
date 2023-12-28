@@ -18,6 +18,15 @@
     -Completed signOut and signIn
     -conpleted SignIn and SignOut Auth
     -update profile API 
+    -BUGFIX :- fixing SignIn and SignOut bug of redirect User from search bar ex:- /browse - Solved
+    -Unsubscibed to the onAuthStateChanged callback
+    -Transfer all hardcoded values in Constants.js file
+    -SETUP (regester Application on TMDB) :- TMDB API
+    -create an app over TMDB and get api token
+    -Made an api call to check and get data
+    -created custon hook to get data and make components more cleaner
+    -
+
     
 
 # Features
