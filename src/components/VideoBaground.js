@@ -1,9 +1,23 @@
 import React from 'react'
-
-const VideoBaground = () => {
+import {  useSelector } from 'react-redux';
+import useMovieTrailer from "../customHooks/useMovieTrailer";
+const VideoBaground = ({movieId}) => {
+    const trailerVideo = useSelector((store)=>store.movies.trailerVideo)
+   
+   useMovieTrailer(movieId)
   return (
-    <div>VideoBaground</div>
+    <div>
+        <iframe 
+            width="560" 
+            height="315" 
+            src={"https://www.youtube.com/embed/" + trailerVideo?.key}
+            title="YouTube video player" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen>
+        </iframe>
+    </div>
   )
 }
 
-export default VideoBaground
+export default VideoBaground;
