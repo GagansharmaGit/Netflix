@@ -34,7 +34,10 @@
     -embedded Youtube video and make it autoplay and mute
     -Added tailwind classes to make it look Awesome
     -Build secondary Container
-    -
+    -Completed secondary container 
+    -Build Movie cards
+    -Added Movies image cdns
+    -created custom hoooks for different genera
 
 
     
