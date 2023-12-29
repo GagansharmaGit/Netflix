@@ -33,24 +33,26 @@
     -updated store with trailer video data
     -embedded Youtube video and make it autoplay and mute
     -Added tailwind classes to make it look Awesome
-    
+    -Build secondary Container
+    -
+
 
     
 
 # Features
 
-Login/Sign Up
-    Sign In /Sign up Form
-    redirect to Browse Page
+-Login/Sign Up
+    -Sign In /Sign up Form
+    -redirect to Browse Page
 
-Browse (after authentication)
-    Header
-    Main Movie
-        Tailer in Background
-        Title & Description
-        MovieSuggestions
-            MovieLists * N
+-Browse (after authentication)
+    -Header
+    -Main Movie
+        -Tailer in Background
+        -Title & Description
+        -MovieSuggestions
+            -MovieLists * N
 
-NetflixGPT
-    Search Bar
-    Movie Suggestions
+-NetflixGPT
+    -Search Bar
+    -Movie Suggestions
