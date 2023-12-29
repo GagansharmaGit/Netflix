@@ -25,7 +25,15 @@
     -create an app over TMDB and get api token
     -Made an api call to check and get data
     -created custon hook to get data and make components more cleaner
-    -
+    -Created MoviesSlice
+    -stored data in moviesSlice
+    -created main container of front page after Login
+    -Planning of secondMain Container
+    -Fetched Data for trailer video
+    -updated store with trailer video data
+    -embedded Youtube video and make it autoplay and mute
+    -Added tailwind classes to make it look Awesome
+    
 
     
 
