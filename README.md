@@ -41,6 +41,19 @@
     -Building GPT Search Feature
     -Completed search bar and GPT Search toggle button
     -**INTEGRATE :- GPT API**
+    -Created Key fofr openAI API(https://platform.openai.com/api-keys)
+    -installing OpenAl Node API Library(https://www.npmjs.com/package/openai) npm install --save openai
+    -* Completed Setup of OpenAI GPT API 
+    -created Movies store
+    -store Movies on Movies Slice
+    -Showing movies on Chat GPT suggestion page from store
+    -completed search bar
+    -completed OpenAI GPT search API responce
+    -Completed Search page for GPT suggestions
+    -Added .env file to increase security and hide API keys
+    -add Memoization to remove unnecessary API calls and other renders
+
+
 
 
     
