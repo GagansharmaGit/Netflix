@@ -83,14 +83,15 @@ const LoginPage = () => {
     <div className=' '>
         <Header/>
         <div className='absolute'>
-            <img 
+            <img
+                className='h-screen object-cover' 
                 src={LOGIN_PAGE_BG_IMG} 
                 alt="BagroundImage" 
             />
         </div>
     
-        <form onSubmit={(e)=>{e.preventDefault()}} className='bg-opacity-80 w-1/3 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg'>
-            <h1 className='font-bold  text-4xl py-4'>
+        <form onSubmit={(e)=>{e.preventDefault()}} className='bg-opacity-80 w-full md:w-1/3 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg'>
+            <h1 className='font-bold text-3xl  md:text-4xl py-4'>
                 {isSignInForm ? "Sign In" : "Sign Up"}
             </h1>
             {!isSignInForm &&(

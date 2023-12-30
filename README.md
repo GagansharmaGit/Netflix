@@ -48,11 +48,19 @@
     -store Movies on Movies Slice
     -Showing movies on Chat GPT suggestion page from store
     -completed search bar
+    -created gptSlice
+    -reuse MoviesList comp
     -completed OpenAI GPT search API responce
     -Completed Search page for GPT suggestions
     -Added .env file to increase security and hide API keys
     -add Memoization to remove unnecessary API calls and other renders
+    -making it more responsive for SmartPhones
+    -fixing BUGS
+    -made it responsive for diffrent screens
+    -WRAPPING UP PROJECT
 
+
+#Project_Log_report
 
 
 
