@@ -10,10 +10,11 @@ const GptSearchBar = () => {
 
    //Search Movie in Tmdb data base
    const searchMovieInTMDB = async (movieName)=>{
+    // console.log(movieName)
     const data = await fetch("https://api.themoviedb.org/3/search/movie?query=" + movieName +"&include_adult=false&language=en-US&page=1", API_OPTIONS);
     
     const json = await data.json()
-
+    // console.log(json + "this is me");
     return json.results;
    }
 
@@ -39,9 +40,9 @@ const GptSearchBar = () => {
     // console.log(gptMoviesList);
 
     const promiseArray = gptMoviesList.map(((movie)=>searchMovieInTMDB(movie)))//IT Returun array of promices
-
+    // console.log(promiseArray);
     const tmdbMovieResults = await Promise.all(promiseArray);
-    console.log(tmdbMovieResults);
+    // console.log(tmdbMovieResults);
 
     dispatch(addGptMoviesResult({moviesNames:gptMoviesList , movieResults:tmdbMovieResults}));
 

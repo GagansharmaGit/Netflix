@@ -21,6 +21,7 @@ const useNowPlayingMovies = () => {
     if(!nowPlayingMovies){
       getNowPlayingMovies();
     }
+    // getNowPlayingMovies();
      
    },[])
   

@@ -20,6 +20,7 @@ const useUpcommingMovies = () => {
     if(!upcomingMovies){
          getUpcoming();
     }
+   // getUpcoming();
    },[])
   
 }

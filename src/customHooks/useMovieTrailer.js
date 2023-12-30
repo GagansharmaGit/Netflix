@@ -23,6 +23,7 @@ useEffect(()=>{
     if(!trailerVideo){
         getMovieVideos();
     }
+    // getMovieVideos();
 },[])
 }
 

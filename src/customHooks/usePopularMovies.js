@@ -18,6 +18,7 @@ const usePopularMovies = () => {
     if(!popularMovies){
       getNowPlayingMovies();
     }
+   // getNowPlayingMovies();
    },[])
   
 }
