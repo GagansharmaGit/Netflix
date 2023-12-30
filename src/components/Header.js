@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/UserSlice';
 import { NETFLIX_LOGO } from '../utils/Constants';
+import { toggleGptSearchView } from '../utils/GptSearchSlice';
 
 const Header = () => {
+  const showGptSearch = useSelector((store)=>store.gpt.showGptSearch);
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
   const handleSignOut = ()=>{
@@ -48,15 +50,25 @@ const Header = () => {
     
   },[]);
 
+  const handleGptSearch=()=>{
+    //Toggle GPT search
+    dispatch(toggleGptSearchView());
+  }
+
   return (
     <div className='absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
-        <img className='w-44'
+        <img className='w-32 h-16 '
              src={NETFLIX_LOGO}
             alt="logooo" 
         />
 
         {user && (
             <div className='flex p-2 items-center '>
+              <button 
+                onClick={handleGptSearch}
+                className='py-2 px-4 m-2 bg-green-200 rounded-lg font-bold mx-4 my-2'>
+                  {showGptSearch ? "Home" : "GPT Search"}
+                </button>
               <img className='w-[48px] h-[48px] mx-2'
                 src={user.photoURL} 
                 alt="user icon" 

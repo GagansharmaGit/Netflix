@@ -38,6 +38,9 @@
     -Build Movie cards
     -Added Movies image cdns
     -created custom hoooks for different genera
+    -Building GPT Search Feature
+    -Completed search bar and GPT Search toggle button
+    -**INTEGRATE :- GPT API**
 
 
     

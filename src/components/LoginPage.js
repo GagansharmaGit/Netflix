@@ -83,8 +83,10 @@ const LoginPage = () => {
     <div className=' '>
         <Header/>
         <div className='absolute'>
-        <img src={LOGIN_PAGE_BG_IMG} 
-            alt="BagroundImage" />
+            <img 
+                src={LOGIN_PAGE_BG_IMG} 
+                alt="BagroundImage" 
+            />
         </div>
     
         <form onSubmit={(e)=>{e.preventDefault()}} className='bg-opacity-80 w-1/3 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg'>
